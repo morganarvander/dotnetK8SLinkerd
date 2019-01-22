@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFront", "WebFront\WebFront.csproj", "{119D7E16-825C-42AB-AB8B-66FFA9E017C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackEndService", "BackEndService\BackEndService.csproj", "{6C0EA9CB-FF89-4FD5-B768-F0906427C4C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC2E1F49-091A-4681-9E25-ADDD7D93E007}"
+	ProjectSection(SolutionItems) = preProject
+		..\Yaml\backend.yml = ..\Yaml\backend.yml
+		..\README.md = ..\README.md
+		..\Yaml\webfront.yml = ..\Yaml\webfront.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{119D7E16-825C-42AB-AB8B-66FFA9E017C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{119D7E16-825C-42AB-AB8B-66FFA9E017C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{119D7E16-825C-42AB-AB8B-66FFA9E017C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{119D7E16-825C-42AB-AB8B-66FFA9E017C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C0EA9CB-FF89-4FD5-B768-F0906427C4C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C0EA9CB-FF89-4FD5-B768-F0906427C4C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C0EA9CB-FF89-4FD5-B768-F0906427C4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C0EA9CB-FF89-4FD5-B768-F0906427C4C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B00BFDC1-7F64-44E1-BF0E-6F84C2AB9CA3}
+	EndGlobalSection
+EndGlobal

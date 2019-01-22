@@ -1,0 +1,46 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: backend
+  namespace: dotnetk8slinkerd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-svc
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: backend-svc
+    spec:
+      containers:
+      - env:
+        - name: GRPC_PORT
+          value: "8080"
+        image: arvander/dotnetk8slinkerd_backend:1.0.2
+        name: backend-svc
+        ports:
+        - containerPort: 80
+          name: http
+        resources:
+          requests:
+            cpu: 100m
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-svc
+  namespace: dotnetk8slinkerd
+spec:
+  selector:
+    app: backend-svc
+  clusterIP: None
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+---

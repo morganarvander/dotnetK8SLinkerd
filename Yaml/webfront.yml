@@ -1,0 +1,52 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dotnetk8slinkerd
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: webfront
+  namespace: dotnetk8slinkerd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webfront-svc
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: webfront-svc
+    spec:
+      containers:
+      - env:
+        - name: WEB_PORT
+          value: "80"
+        image: arvander/dotnetk8slinkerd:1.0.1
+        name: webfront-svc
+        ports:
+        - containerPort: 80
+          name: http
+        resources:
+          requests:
+            cpu: 100m
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webfront-svc
+  namespace: dotnetk8slinkerd
+spec:
+  type: LoadBalancer
+  selector:
+    app: webfront-svc
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+---

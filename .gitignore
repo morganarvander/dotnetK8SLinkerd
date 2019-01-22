@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Solution/.vs
+/Solution/BackEndService/bin
+/Solution/BackEndService/obj
+/Solution/BackEndService/out
+/Solution/WebFront/.vs
+/Solution/WebFront/bin
+/Solution/WebFront/obj
